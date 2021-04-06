@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
-import Food from '../../components/Food';
+import { Food } from '../../components/Food';
 import { Header } from '../../components/Header';
-import ModalAddFood from '../../components/ModalAddFood';
-import ModalEditFood from '../../components/ModalEditFood';
+import { ModalAddFood } from '../../components/ModalAddFood';
+import { ModalEditFood } from '../../components/ModalEditFood';
 
 import api from '../../services/api';
 import { FoodsContainer } from './styles';
@@ -59,7 +59,7 @@ export const Dashboard = (): JSX.Element => {
     }
   }
 
-  const handleDeleteFood = async (id: number)=> {
+  const handleDeleteFood = async (id: number) => {
 
     await api.delete(`/foods/${id}`);
 
